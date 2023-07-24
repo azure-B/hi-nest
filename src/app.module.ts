@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-
+import { MoviesController } from './movies/movies.controller';
 @Module({
   imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [MoviesController],
+  // Express의 Router같은 존재
+  providers: [],
 })
 export class AppModule {}
