@@ -1,4 +1,5 @@
 import {
+  Body,
   Controller,
   Delete,
   Get,
@@ -21,8 +22,8 @@ export class MoviesController {
   }
 
   @Post()
-  create() {
-    return `we will create movie`;
+  create(@Body() { name, director }) {
+    return `${name}, ++ ${director}`;
   }
 
   @Delete('/:id')
